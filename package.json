@@ -1,0 +1,51 @@
+{
+  "name": "magpie-dsh-chattail",
+  "version": "1.0.0",
+  "description": "Magpie gateway middleware to heal truncated Chat SSE streams missing finish_reason for DeepSeek Harness (fixes 'Stream ended without finish_reason' & issue #5289)",
+  "type": "module",
+  "main": "./magpie-dsh-chattail.middleware.js",
+  "author": "MDX-Tom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MDX-Tom/magpie-dsh-chattail.git"
+  },
+  "files": [
+    "magpie-dsh-chattail.middleware.js",
+    "icon.svg",
+    "README.md",
+    "README_EN.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "magpie",
+    "magpie-plugin",
+    "deepseek-harness",
+    "dsh",
+    "chat-tail",
+    "stream-heal",
+    "finish-reason",
+    "gateway-middleware"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test magpie-dsh-chattail.test.mjs"
+  },
+  "magpie": {
+    "name": "DSH ChatTail Repair",
+    "middleware": "./magpie-dsh-chattail.middleware.js",
+    "icon": "./icon.svg",
+    "options": {
+      "enabled": true,
+      "applyTo": [
+        "minimax",
+        "minimax-cn",
+        "MiniMax"
+      ],
+      "defaultFinishReason": "auto",
+      "repairOnToolComplete": true,
+      "repairUsageChunk": true,
+      "repairEmptyDelta": true,
+      "forceNonStream": false
+    }
+  }
+}

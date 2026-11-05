@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+  <rect x="3" y="3" width="94" height="94" rx="19" stroke="url(#cyanGrad)" stroke-width="2" stroke-opacity="0.3"/>
+  <!-- Stream flow pulses (representing SSE event chunks) -->
+  <line x1="22" y1="34" x2="48" y2="34" stroke="#64748B" stroke-width="4" stroke-linecap="round"/>
+  <line x1="22" y1="46" x2="60" y2="46" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+  <line x1="22" y1="58" x2="52" y2="58" stroke="url(#cyanGrad)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Stream Tail / Terminal boundary shield & checkmark -->
+  <circle cx="70" cy="58" r="14" fill="#0F172A" stroke="url(#emeraldGrad)" stroke-width="3"/>
+  <path d="M64 58L68 62L76 54" stroke="#34D399" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Signal connection dots -->
+  <circle cx="58" cy="34" r="2.5" fill="#38BDF8"/>
+  <circle cx="68" cy="46" r="2.5" fill="#38BDF8"/>
+</svg>
